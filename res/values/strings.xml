@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyCalculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="suma">+</string>
+    <string name="resta">-</string>
+    <string name="multipl">*</string>
+    <string name="division">/</string>
+    <string name="borrar">C</string>
+    <string name="resultado">=</string>
+    <string name="num_cero">0</string>
+    <string name="num_uno">1</string>
+    <string name="num_dos">2</string>
+    <string name="num_tres">3</string>
+    <string name="num_cuatro">4</string>
+    <string name="num_cinco">5</string>
+    <string name="num_seis">6</string>
+    <string name="num_siete">7</string>
+    <string name="num_ocho">8</string>
+    <string name="num_nueve">9</string>
+
+</resources>
