@@ -2,51 +2,44 @@ package com.example.mycalculator;
 
 public class Operaciones {
 	
-	public static int calcular_suma(String a, String b){
+	
+	
+	public static String calcular_operacion(String a, String b, String signo){
 		a.trim();
 		b.trim();
-		if (a.equals("")||b.equals("")) {
+		/*if (a.equals("")||b.equals("")) {
 			a="0";
 			b="0";
+		}*/
+				
+		if (signo.equals("+")) {			
+			 
+			return String.valueOf((Integer.parseInt(a)+Integer.parseInt(b))) ;
+			
+		} else {
+			if (signo.equals("-")) {				
+				 
+				return  String.valueOf((Integer.parseInt(a)-Integer.parseInt(b)));
+				
+			} else {
+				if (signo.equals("*")) {					
+					
+					return  String.valueOf((Integer.parseInt(a)*Integer.parseInt(b)));
+					
+				} else {					
+					
+					return  String.valueOf((Double.parseDouble(a)/Double.parseDouble(b)));
+
+				}
+
+			}
+
 		}
 				
-		return  (Integer.parseInt(a) + Integer.parseInt(b));		
+				
 		
 	}
 	
-	public static int calcular_resta(String a, String b){
-		a.trim();
-		b.trim();
-		if (a.equals("")||b.equals("")) {
-			a="0";
-			b="0";
-		}
-		
-		return  (Integer.parseInt(a) - Integer.parseInt(b));
-	}
 	
-	public static int calcular_multiplicacion(String a, String b){
-		a.trim();
-		b.trim();
-		if (a.equals("")||b.equals("")) {
-			a="0";
-			b="0";
-		}
-		
-		return  (Integer.parseInt(a) * Integer.parseInt(b));
-		
-	}
-	
-	public static Double calcular_division(String a, String b){
-		
-		a.trim();
-		b.trim();
-		if (a.equals("")||b.equals("")) {
-			a="0";
-			b="0";
-		}
-		
-		return (double) (Integer.parseInt(a) + Integer.parseInt(b));
-	}
 
 }

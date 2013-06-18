@@ -2,12 +2,11 @@ package com.example.mycalculator;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.text.Editable;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.example.mycalculator.Operaciones;
 
@@ -30,9 +29,11 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button button_restar;
 	private Button button_sumar;
 	private Button button_dividir;
+	private ImageView imageV_borrar;
 	
 	private String a="0";
 	private String b="0";
+	private String signo="";
 	
 
 	@Override
@@ -41,6 +42,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_main);
 		
 		editT_resultado = (EditText) findViewById(R.id.editT_resultado);
+		
+		imageV_borrar = (ImageView) findViewById(R.id.imageView_borrar);
 		
 		button_resultado = (Button) findViewById(R.id.button_resultado);
 		button_sumar = (Button) findViewById(R.id.button_suma);
@@ -75,6 +78,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		button_ocho.setOnClickListener(this);
 		button_nueve.setOnClickListener(this);
 		button_resultado.setOnClickListener(this);
+		imageV_borrar.setOnClickListener(this);
 		
 	}
 
@@ -132,17 +136,55 @@ public class MainActivity extends Activity implements OnClickListener {
 			editT_resultado.setText(editT_resultado.getText()+"9");
 			break;
 			
+		case R.id.imageView_borrar:
+			editT_resultado.setText("");
+			break;
+			
 		case R.id.button_resultado:
 			b = editT_resultado.getText().toString();
+			if (signo.equals("+")) {
+				editT_resultado.setText(Operaciones.calcular_operacion(a, b, "+"));
+				break;
+			} else {
+				if (signo.equals("-")) {
+					editT_resultado.setText(Operaciones.calcular_operacion(a, b, "-"));
+					break;
+				} else {
+					if (signo.equals("*")) {
+						editT_resultado.setText(Operaciones.calcular_operacion(a, b, "*"));
+						break;
+					} else {
+						editT_resultado.setText(Operaciones.calcular_operacion(a, b, "/"));
+						break;
+					}
+
+				}
+
+			}		
 			
-			System.out.println("Resultado: "+String.valueOf(Operaciones.calcular_suma(a, b)));
-			editT_resultado.setText(String.valueOf(Operaciones.calcular_suma(a, b)));
-			
-			break;
 			
 		case R.id.button_suma:
 			a = editT_resultado.getText().toString();
-			editT_resultado.setText("");		
+			signo = "+";
+			editT_resultado.setText("");
+			
+		case R.id.button_resta:
+			a = editT_resultado.getText().toString();
+			signo = "-";
+			editT_resultado.setText("");
+			break;
+			
+		case R.id.button_multriplicar:
+			a = editT_resultado.getText().toString();
+			signo = "*";
+			editT_resultado.setText("");
+			break;
+			
+		case R.id.button_division:
+			a = editT_resultado.getText().toString();
+			signo = "/";
+			editT_resultado.setText("");
+			break;
 			
 			
 		}
