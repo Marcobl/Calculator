@@ -167,6 +167,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			a = editT_resultado.getText().toString();
 			signo = "+";
 			editT_resultado.setText("");
+			break;
 			
 		case R.id.button_resta:
 			a = editT_resultado.getText().toString();
