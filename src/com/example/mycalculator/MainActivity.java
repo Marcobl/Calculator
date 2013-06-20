@@ -10,9 +10,8 @@ import android.widget.ImageView;
 
 import com.example.mycalculator.Operaciones;
 
-
 public class MainActivity extends Activity implements OnClickListener {
-	
+
 	private EditText editT_resultado;
 	private Button button_resultado;
 	private Button button_cero;
@@ -30,27 +29,26 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button button_sumar;
 	private Button button_dividir;
 	private ImageView imageV_borrar;
-	
-	private String a="0";
-	private String b="0";
-	private String signo="";
-	
+
+	private String a = "0";
+	private String b = "0";
+	private String signo = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		editT_resultado = (EditText) findViewById(R.id.editT_resultado);
-		
+
 		imageV_borrar = (ImageView) findViewById(R.id.imageView_borrar);
-		
+
 		button_resultado = (Button) findViewById(R.id.button_resultado);
 		button_sumar = (Button) findViewById(R.id.button_suma);
 		button_restar = (Button) findViewById(R.id.button_resta);
 		button_multiplicar = (Button) findViewById(R.id.button_multriplicar);
 		button_dividir = (Button) findViewById(R.id.button_division);
-		
+
 		button_cero = (Button) findViewById(R.id.button_cero);
 		button_uno = (Button) findViewById(R.id.button_uno);
 		button_dos = (Button) findViewById(R.id.button_dos);
@@ -61,7 +59,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		button_siete = (Button) findViewById(R.id.button_siete);
 		button_ocho = (Button) findViewById(R.id.button_ocho);
 		button_nueve = (Button) findViewById(R.id.button_nueve);
-		
+
 		button_cero.setOnClickListener(this);
 		button_resultado.setOnClickListener(this);
 		button_sumar.setOnClickListener(this);
@@ -79,118 +77,112 @@ public class MainActivity extends Activity implements OnClickListener {
 		button_nueve.setOnClickListener(this);
 		button_resultado.setOnClickListener(this);
 		imageV_borrar.setOnClickListener(this);
-		
+
 	}
 
-	public void limpiarResultado(){
+	public void limpiarResultado() {
 		editT_resultado.setText("");
-		
+
 	}
 
 	@Override
 	public void onClick(View arg0) {
-		
+
 		switch (arg0.getId()) {
-		
+
 		case R.id.button_cero:
-			if (!editT_resultado.getText().equals(null)) {
-				
-				editT_resultado.setText(editT_resultado.getText()+"0");
-			}
-						
-			break;
+			if (!(editT_resultado.getText().equals(null))) {
+
+				editT_resultado.setText(editT_resultado.getText() + "0");
+				break;
+			}			
 
 		case R.id.button_uno:
-			editT_resultado.setText(editT_resultado.getText()+"1");
+			editT_resultado.setText(editT_resultado.getText() + "1");
 			break;
-			
+
 		case R.id.button_dos:
-			editT_resultado.setText(editT_resultado.getText()+"2");
+			editT_resultado.setText(editT_resultado.getText() + "2");
 			break;
-		
+
 		case R.id.button_tres:
-			editT_resultado.setText(editT_resultado.getText()+"3");
+			editT_resultado.setText(editT_resultado.getText() + "3");
 			break;
-			
+
 		case R.id.button_cuatro:
-			editT_resultado.setText(editT_resultado.getText()+"4");
+			editT_resultado.setText(editT_resultado.getText() + "4");
 			break;
-			
+
 		case R.id.button_cinco:
-			editT_resultado.setText(editT_resultado.getText()+"5");
+			editT_resultado.setText(editT_resultado.getText() + "5");
 			break;
-			
+
 		case R.id.button_seis:
-			editT_resultado.setText(editT_resultado.getText()+"6");
+			editT_resultado.setText(editT_resultado.getText() + "6");
 			break;
-			
+
 		case R.id.button_siete:
-			editT_resultado.setText(editT_resultado.getText()+"7");
+			editT_resultado.setText(editT_resultado.getText() + "7");
 			break;
-		
+
 		case R.id.button_ocho:
-			editT_resultado.setText(editT_resultado.getText()+"8");
+			editT_resultado.setText(editT_resultado.getText() + "8");
 			break;
-			
+
 		case R.id.button_nueve:
-			editT_resultado.setText(editT_resultado.getText()+"9");
+			editT_resultado.setText(editT_resultado.getText() + "9");
 			break;
-			
+
 		case R.id.imageView_borrar:
 			editT_resultado.setText("");
 			break;
-			
+
 		case R.id.button_resultado:
 			b = editT_resultado.getText().toString();
 			if (signo.equals("+")) {
-				editT_resultado.setText(Operaciones.calcular_operacion(a, b, "+"));
+				editT_resultado.setText(Operaciones.calcular_operacion(a, b,
+						"+"));
+				break;
+			} else if (signo.equals("-")) {
+				editT_resultado.setText(Operaciones.calcular_operacion(a, b,
+						"-"));
+				break;
+			} else if (signo.equals("*")) {
+				editT_resultado.setText(Operaciones.calcular_operacion(a, b,
+						"*"));
 				break;
 			} else {
-				if (signo.equals("-")) {
-					editT_resultado.setText(Operaciones.calcular_operacion(a, b, "-"));
-					break;
-				} else {
-					if (signo.equals("*")) {
-						editT_resultado.setText(Operaciones.calcular_operacion(a, b, "*"));
-						break;
-					} else {
-						editT_resultado.setText(Operaciones.calcular_operacion(a, b, "/"));
-						break;
-					}
+				editT_resultado.setText(Operaciones.calcular_operacion(a, b,
+						"/"));
+				break;
+			}
 
-				}
-
-			}		
-			
-			
 		case R.id.button_suma:
 			a = editT_resultado.getText().toString();
 			signo = "+";
 			editT_resultado.setText("");
 			break;
-			
+
 		case R.id.button_resta:
 			a = editT_resultado.getText().toString();
 			signo = "-";
 			editT_resultado.setText("");
 			break;
-			
+
 		case R.id.button_multriplicar:
 			a = editT_resultado.getText().toString();
 			signo = "*";
 			editT_resultado.setText("");
 			break;
-			
+
 		case R.id.button_division:
 			a = editT_resultado.getText().toString();
 			signo = "/";
 			editT_resultado.setText("");
 			break;
-			
-			
+
 		}
-		// TODO Auto-generated method stub
-		
+
 	}
 
 }

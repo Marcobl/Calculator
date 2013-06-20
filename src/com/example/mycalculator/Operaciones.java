@@ -4,11 +4,8 @@ public class Operaciones {
 
 	public static String calcular_operacion(String a, String b, String signo) {
 		a.trim();
-		b.trim();
-		/*
-		 * if (a.equals("")||b.equals("")) { a="0"; b="0"; }
-		 */
-
+		b.trim();	
+		  
 		if (signo.equals("+")) {
 
 			return String.valueOf((Integer.parseInt(a) + Integer.parseInt(b)));
