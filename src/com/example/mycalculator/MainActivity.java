@@ -91,11 +91,15 @@ public class MainActivity extends Activity implements OnClickListener {
 		switch (arg0.getId()) {
 
 		case R.id.button_cero:
-			if (!(editT_resultado.getText().equals(null))) {
+			if ((editT_resultado.getText().toString().equals(""))) {
 
+				editT_resultado.setText("");
+				break;
+				
+			}else{
 				editT_resultado.setText(editT_resultado.getText() + "0");
 				break;
-			}			
+			} 	
 
 		case R.id.button_uno:
 			editT_resultado.setText(editT_resultado.getText() + "1");
@@ -138,24 +142,30 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 
 		case R.id.button_resultado:
-			b = editT_resultado.getText().toString();
-			if (signo.equals("+")) {
-				editT_resultado.setText(Operaciones.calcular_operacion(a, b,
-						"+"));
-				break;
-			} else if (signo.equals("-")) {
-				editT_resultado.setText(Operaciones.calcular_operacion(a, b,
-						"-"));
-				break;
-			} else if (signo.equals("*")) {
-				editT_resultado.setText(Operaciones.calcular_operacion(a, b,
-						"*"));
-				break;
-			} else {
-				editT_resultado.setText(Operaciones.calcular_operacion(a, b,
-						"/"));
-				break;
+			try {
+				b = editT_resultado.getText().toString();
+				if (signo.equals("+")) {
+					editT_resultado.setText(Operaciones.calcular_operacion(a, b,
+							"+"));
+					break;
+				} else if (signo.equals("-")) {
+					editT_resultado.setText(Operaciones.calcular_operacion(a, b,
+							"-"));
+					break;
+				} else if (signo.equals("*")) {
+					editT_resultado.setText(Operaciones.calcular_operacion(a, b,
+							"*"));
+					break;
+				} else {
+					editT_resultado.setText(Operaciones.calcular_operacion(a, b,
+							"/"));
+					break;
+				}
+				
+			} catch (Exception e) {
+				// TODO: handle exception
 			}
+			
 
 		case R.id.button_suma:
 			a = editT_resultado.getText().toString();
