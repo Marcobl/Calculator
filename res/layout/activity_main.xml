@@ -1,169 +1,201 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
      tools:context=".MainActivity" >
 
     <TableRow
         android:id="@+id/tableRow1"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" >
+        android:layout_weight="1"        
+         >
 
         <EditText
             android:id="@+id/editT_resultado"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:layout_span="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"        
             android:focusable="false"
-            android:focusableInTouchMode="false"
+            android:focusableInTouchMode="false"            
+            android:layout_weight="5"
+                        
             android:inputType="none|number" />
 
         <Button
             android:id="@+id/button_suma"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"            
-            android:text="@string/suma" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/DimGray"
+            android:text="@string/suma"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:layout_margin="3dp"
+            android:textColor="@color/White" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow2"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" >
 
         <Button
             android:id="@+id/button_uno" 
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
-        	android:layout_weight="1"           
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:layout_weight="1"        	           
             android:text="@string/num_uno" />
 
         <Button
             android:id="@+id/button_dos"
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
         	android:layout_weight="1"            
             android:text="@string/num_dos" />
 
         <Button
             android:id="@+id/button_tres"
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
         	android:layout_weight="1"            
             android:text="@string/num_tres" />
 
         <Button
             android:id="@+id/button_resta"
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent" 
-        	android:layout_weight="1"           
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/DimGray"
+            android:textColor="@color/White"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:layout_margin="3dp"
             android:text="@string/resta" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow3"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" 
         android:layout_weight="1">
 
         <Button
             android:id="@+id/button_cuatro"
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent" 
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent" 
         	android:layout_weight="1"           
             android:text="@string/num_cuatro" />
 
         <Button
             android:id="@+id/button_cinco" 
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent" 
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent" 
         	android:layout_weight="1"          
             android:text="@string/num_cinco" />
 
         <Button
             android:id="@+id/button_seis" 
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent" 
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent" 
         	android:layout_weight="1"          
             android:text="@string/num_seis" />
 
         <Button
-            android:id="@+id/button_multriplicar" 
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent" 
-        	android:layout_weight="1"          
-            android:text="@string/multipl" />
+            android:id="@+id/button_multriplicar"
+            style="android:buttonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/DimGray"
+            android:text="@string/multipl"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:layout_margin="3dp"
+            android:textColor="@color/White" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow4"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" >
 
         <Button
             android:id="@+id/button_siete"
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
         	android:layout_weight="1"            
             android:text="@string/num_siete" />
 
         <Button
             android:id="@+id/button_ocho" 
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent" 
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent" 
         	android:layout_weight="1"          
             android:text="@string/num_ocho" />
 
         <Button
             android:id="@+id/button_nueve" 
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
         	android:layout_weight="1"           
             android:text="@string/num_nueve" />
 
         <Button
             android:id="@+id/button_division"
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent" 
-        	android:layout_weight="1"           
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent" 
+        	android:layout_weight="1"
+        	android:background="@color/DimGray"
+        	android:textColor="@color/White"
+        	android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:layout_margin="3dp"           
             android:text="@string/division" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow5"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" >
 
         <ImageView
             android:id="@+id/imageView_borrar" 
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
         	android:layout_weight="0.5"           
             android:contentDescription="@string/borrar"
             android:src="@drawable/borrar" />
 
         <Button
             android:id="@+id/button_cero" 
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
         	android:layout_weight="0.5"           
             android:text="@string/num_cero" />
 
         <Button
             android:id="@+id/button_resultado"
-            android:layout_width="fill_parent"
-        	android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
         	android:layout_weight="1"            
             android:layout_span="2"
+            android:background="@color/DimGray"
+            android:textColor="@color/White"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:layout_margin="3dp"
             android:text="@string/resultado" />
 
     </TableRow>
