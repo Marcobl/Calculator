@@ -18,13 +18,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_span="3"
             android:background="@color/AliceBlue"
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:inputType="none|number"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            android:shadowRadius="2" />
+             />
 
         <Button
             android:id="@+id/button_suma"
@@ -202,18 +201,6 @@
             android:layout_margin="3dp"
             android:text="@string/resultado" />
 
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
     </TableRow>
 
 </TableLayout>
