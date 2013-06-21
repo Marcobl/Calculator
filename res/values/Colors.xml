@@ -2,7 +2,8 @@
 <resources>
         
  <color name="White">#FFFFFF</color>
+ <color name="AliceBlue">#F0F8FF</color>
  <color name="DimGray">#696969</color>
-
+ 
     
 </resources>
